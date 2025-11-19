@@ -60,9 +60,9 @@ if ahem:
     st.write(f"Ur count = {st.session_state.count}")
     if st.session_state.count >= 20 :
         st.info("Awww u already reached 20 counts")
-        time.sleep(3)
+        time.sleep(1)
         st.info("Ok le me give u a Crazy Hint")
-        time.sleep(3)
+        time.sleep(1)
         st.info("'I didnt do any numbering error'")
 url = "https://raw.githubusercontent.com/JIGSAW-tex/ahemmmm/refs/heads/main/images.jpeg"
 resp = urllib.request.urlopen(url)
@@ -78,3 +78,4 @@ if fifth == "1235" :
     time.sleep(5)
     st.image(image)
     
+
