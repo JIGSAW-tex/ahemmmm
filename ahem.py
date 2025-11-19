@@ -1,4 +1,6 @@
 import streamlit as st 
+import  urllib.request
+import numpy as np
 import cv2 as cv
 import time 
 
@@ -7,7 +9,6 @@ st.title("Oii Butkii !!!")
 st.markdown("I bet ur noob 😏")
 
 c1 , c2 , c3 = st.columns(3)
-
 
 with c1:
     first  = st.text_input("Enter 4 alphabets I like the most🧲" , key = "f1")
@@ -54,15 +55,20 @@ ahem = st.button("Ahemmm")
 if "count" not in st.session_state:
     st.session_state.count = 0
 time_count = 5
-if ahem :
+if ahem:
     st.session_state.count +=1
     st.write(f"Ur count = {st.session_state.count}")
     if st.session_state.count >= 20 :
         st.info("Awww u already reached 20 counts")
-        time.sleep(1)
+        time.sleep(3)
         st.info("Ok le me give u a Crazy Hint")
-        time.sleep(1)
+        time.sleep(3)
         st.info("'I didnt do any numbering error'")
+url = "https://raw.githubusercontent.com/JIGSAW-tex/ahemmmm/refs/heads/main/images.jpeg"
+resp = urllib.request.urlopen(url)
+image = np.asarray(bytearray(resp.read()), dtype="uint8")
+image = cv.imdecode(image, cv.IMREAD_COLOR)
+image = cv.cvtColor(image , cv.COLOR_BGR2RGB)
 if fifth == "1235" :
     st.success("Finallllllllyyyyyyy!!!!!!!! btw..........")
     time.sleep(5)
@@ -70,9 +76,5 @@ if fifth == "1235" :
     time.sleep(2)
     st.title("Ahemmmmmmm!!!!!!")
     time.sleep(5)
-    img = cv.imread(r"\images.jpeg")
-    img = cv.cvtColor(img , cv.COLOR_BGR2RGB)
-    st.image(img)
-
+    st.image(image)
     
-
