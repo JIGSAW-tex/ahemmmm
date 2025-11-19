@@ -54,7 +54,7 @@ ahem = st.button("Ahemmm")
 if "count" not in st.session_state:
     st.session_state.count = 0
 time_count = 5
-if ahem or fifth:
+if ahem :
     st.session_state.count +=1
     st.write(f"Ur count = {st.session_state.count}")
     if st.session_state.count >= 20 :
@@ -73,4 +73,5 @@ if fifth == "1235" :
     img = cv.imread(r"C:\Users\suhai\Desktop\images.jpeg")
     img = cv.cvtColor(img , cv.COLOR_BGR2RGB)
     st.image(img)
+
     
