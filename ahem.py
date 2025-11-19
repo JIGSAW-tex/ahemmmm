@@ -59,9 +59,9 @@ if ahem :
     st.write(f"Ur count = {st.session_state.count}")
     if st.session_state.count >= 20 :
         st.info("Awww u already reached 20 counts")
-        time.sleep(3)
+        time.sleep(1)
         st.info("Ok le me give u a Crazy Hint")
-        time.sleep(3)
+        time.sleep(1)
         st.info("'I didnt do any numbering error'")
 if fifth == "1235" :
     st.success("Finallllllllyyyyyyy!!!!!!!! btw..........")
@@ -70,8 +70,9 @@ if fifth == "1235" :
     time.sleep(2)
     st.title("Ahemmmmmmm!!!!!!")
     time.sleep(5)
-    img = cv.imread(r"C:\Users\suhai\Desktop\images.jpeg")
+    img = cv.imread(r"\images.jpeg")
     img = cv.cvtColor(img , cv.COLOR_BGR2RGB)
     st.image(img)
 
     
+
