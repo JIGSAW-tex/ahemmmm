@@ -72,10 +72,11 @@ image = cv.cvtColor(image , cv.COLOR_BGR2RGB)
 if fifth == "1235" :
     st.success("Finallllllllyyyyyyy!!!!!!!! btw..........")
     time.sleep(5)
-    st.warning("Are u waitingggggggggggg!!!!!!!!!!")
+    st.warning("NEVER BELIEVED U WILL OPEN THIS AGAIN !!!! I  !(DONT)  MISS U ")
     time.sleep(2)
     st.title("Ahemmmmmmm!!!!!!")
     time.sleep(5)
     st.image(image)
     
+
 
